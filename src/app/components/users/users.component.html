@@ -1,0 +1,18 @@
+<div class="users-container">
+  <h2>Users</h2>
+  <div class="users-grid">
+    @for (user of users(); track user.id) {
+      <div class="user-card">
+        <h3>{{ user.name }}</h3>
+        <p class="username">{{ '@' + user.username }}</p>
+        <div class="user-details">
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>Phone:</strong> {{ user.phone }}</p>
+          <p><strong>Website:</strong> {{ user.website }}</p>
+          <p><strong>Company:</strong> {{ user.company.name }}</p>
+          <p><strong>Address:</strong> {{ user.address.city }}, {{ user.address.street }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</div>
