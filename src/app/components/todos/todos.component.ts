@@ -1,5 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatListModule } from '@angular/material/list';
 import { JsonplaceholderService } from '../../services/jsonplaceholder.service';
 import { Todo } from '../../models/todo.model';
 import { User } from '../../models/user.model';
@@ -7,7 +10,7 @@ import { User } from '../../models/user.model';
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButtonModule, MatCheckboxModule, MatListModule],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css'
 })

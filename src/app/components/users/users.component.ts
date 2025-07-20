@@ -1,12 +1,13 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { JsonplaceholderService } from '../../services/jsonplaceholder.service';
 import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

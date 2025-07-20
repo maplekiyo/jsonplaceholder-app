@@ -1,38 +1,33 @@
 <div class="todos-container">
   <h2>Todos</h2>
   <div class="filter-controls">
-    <button 
-      [class.active]="filter() === 'all'"
-      (click)="setFilter('all')">
+    <button mat-raised-button 
+            [color]="filter() === 'all' ? 'primary' : ''"
+            (click)="setFilter('all')">
       All ({{ todos().length }})
     </button>
-    <button 
-      [class.active]="filter() === 'completed'"
-      (click)="setFilter('completed')">
+    <button mat-raised-button 
+            [color]="filter() === 'completed' ? 'primary' : ''"
+            (click)="setFilter('completed')">
       Completed ({{ getCompletedCount() }})
     </button>
-    <button 
-      [class.active]="filter() === 'pending'"
-      (click)="setFilter('pending')">
+    <button mat-raised-button 
+            [color]="filter() === 'pending' ? 'primary' : ''"
+            (click)="setFilter('pending')">
       Pending ({{ getPendingCount() }})
     </button>
   </div>
-  <div class="todos-list">
+  
+  <mat-list>
     @for (todo of filteredTodos(); track todo.id) {
-      <div class="todo-item" [class.completed]="todo.completed">
-        <div class="todo-checkbox">
-          <input type="checkbox" [checked]="todo.completed" disabled>
-        </div>
-        <div class="todo-content">
-          <h4>{{ todo.title }}</h4>
-          <p class="todo-user">Assigned to: {{ getUserName(todo.userId) }}</p>
-        </div>
-        <div class="todo-status">
-          <span [class]="todo.completed ? 'status-completed' : 'status-pending'">
-            {{ todo.completed ? 'Completed' : 'Pending' }}
-          </span>
-        </div>
-      </div>
+      <mat-list-item [class.completed]="todo.completed">
+        <mat-checkbox [checked]="todo.completed" disabled matListItemIcon></mat-checkbox>
+        <div matListItemTitle>{{ todo.title }}</div>
+        <div matListItemLine>Assigned to: {{ getUserName(todo.userId) }}</div>
+        <span matListItemMeta [class]="todo.completed ? 'status-completed' : 'status-pending'">
+          {{ todo.completed ? 'Completed' : 'Pending' }}
+        </span>
+      </mat-list-item>
     }
-  </div>
+  </mat-list>
 </div>

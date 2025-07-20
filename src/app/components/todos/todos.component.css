@@ -8,67 +8,8 @@
   gap: 10px;
 }
 
-.filter-controls button {
-  padding: 8px 16px;
-  border: 1px solid #ddd;
-  background: white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.filter-controls button:hover {
-  background: #f5f5f5;
-}
-
-.filter-controls button.active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.todos-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.todo-item {
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.todo-item.completed {
+.completed {
   opacity: 0.7;
-  background: #f8f9fa;
-}
-
-.todo-checkbox {
-  margin-right: 16px;
-}
-
-.todo-content {
-  flex: 1;
-}
-
-.todo-content h4 {
-  margin: 0 0 4px 0;
-  color: #333;
-}
-
-.todo-user {
-  margin: 0;
-  color: #666;
-  font-size: 0.9em;
-}
-
-.todo-status {
-  margin-left: 16px;
 }
 
 .status-completed {

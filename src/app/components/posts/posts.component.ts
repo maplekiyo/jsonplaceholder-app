@@ -1,5 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { JsonplaceholderService } from '../../services/jsonplaceholder.service';
 import { Post } from '../../models/post.model';
 import { User } from '../../models/user.model';
@@ -7,7 +8,7 @@ import { User } from '../../models/user.model';
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })

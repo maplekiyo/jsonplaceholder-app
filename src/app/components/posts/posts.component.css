@@ -8,34 +8,3 @@
   gap: 20px;
   margin-top: 20px;
 }
-
-.post-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.post-card h3 {
-  margin: 0 0 12px 0;
-  color: #333;
-  font-size: 1.2em;
-}
-
-.post-body {
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-
-.post-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9em;
-  color: #888;
-}
-
-.author {
-  font-weight: bold;
-}

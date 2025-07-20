@@ -1,14 +1,13 @@
-<div class="app-container">
-  <header class="app-header">
-    <h1>JSONPlaceholder Angular App</h1>
-    <nav class="app-nav">
-      <a routerLink="/posts" routerLinkActive="active">Posts</a>
-      <a routerLink="/users" routerLinkActive="active">Users</a>
-      <a routerLink="/todos" routerLinkActive="active">Todos</a>
-    </nav>
-  </header>
-  
-  <main class="app-main">
-    <router-outlet />
-  </main>
-</div>
+<mat-toolbar color="primary">
+  <span>JSONPlaceholder Angular App</span>
+  <span class="spacer"></span>
+  <nav>
+    <button mat-button routerLink="/posts" routerLinkActive="active">Posts</button>
+    <button mat-button routerLink="/users" routerLinkActive="active">Users</button>
+    <button mat-button routerLink="/todos" routerLinkActive="active">Todos</button>
+  </nav>
+</mat-toolbar>
+
+<main class="app-main">
+  <router-outlet />
+</main>

@@ -2,17 +2,19 @@
   <h2>Users</h2>
   <div class="users-grid">
     @for (user of users(); track user.id) {
-      <div class="user-card">
-        <h3>{{ user.name }}</h3>
-        <p class="username">{{ '@' + user.username }}</p>
-        <div class="user-details">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ user.name }}</mat-card-title>
+          <mat-card-subtitle>{{ '@' + user.username }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
           <p><strong>Email:</strong> {{ user.email }}</p>
           <p><strong>Phone:</strong> {{ user.phone }}</p>
           <p><strong>Website:</strong> {{ user.website }}</p>
           <p><strong>Company:</strong> {{ user.company.name }}</p>
           <p><strong>Address:</strong> {{ user.address.city }}, {{ user.address.street }}</p>
-        </div>
-      </div>
+        </mat-card-content>
+      </mat-card>
     }
   </div>
 </div>
